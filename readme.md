@@ -4,10 +4,25 @@
 - customisable commands
 - setup police jobs and dispatches
 - Trigger to create dispatch for jobs that you want
+- Panic button can hear everyone in radius of officer
+- /dispatchset to setup players dispatch
+- TrigegrEvent to create dispatch: TriggerServerEvent("md_dispatch:CreateDispatch", jobs, message, title, position, blipId)
+
 
 More on **https://md-dev.store**
         **https://discord.gg/PSfvsmXqE6**
 
+
+
+
+
+TriggerEvent (for example)
+RegisterCommand("mdTriggerTest", function()
+    local playerPed = PlayerPedId()
+    local coords = GetEntityCoords(playerPed, true)
+    local playerPos = vector3(coords.x, coords.y, coords.z)
+    TriggerServerEvent("md_dispatch:CreateDispatch", {"police", "mechanic"}, "Test Message", "CODE 1000", playerPos, 99)
+end)
 
 # CONFIG
 
@@ -43,5 +58,6 @@ Config.PlayerShootTimeout = 20 --**If player is shooting without break, every xx
 Config.BlacklistShootingZones = {
     {minPos = vector3(1615.8, 4391.12, 0), maxPos = vector3(524.96, 5872.0, 1000)}, --**Now this is Mt.Chilliad; where should be shooting allowed without dispatch creation?**
 }
+
 
 
