@@ -1,0 +1,59 @@
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+Bhaiksuki&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Zalando+Sans+SemiExpanded:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="cont" id="container">
+    <div class="top" id="top">
+      <div class="left" id="timeId"></div>
+      <div class="center" id="pocetId"></div>
+      <div class="right" id="distId"></div>
+    </div>
+    <div>
+        <div class="txt">
+            <div class="head" id="titleId"></div>
+            <div class="info" id="messageId"></div>
+        </div>
+
+        <div class="top">
+            <div class="left2" id="L"><</div>
+            <div class="center2" id="G">G</div>
+            <div class="right2"id="R">></div>
+        </div>
+    </div>
+  </div>
+  <div class="setting" id="sett" style="display:none">
+    <center><div class="settxt">Dispatch Settings</div></center>
+    <table class="settxt2">
+        <tr>
+          <td>Callsign</td>
+          <td><input type="text" id="callsign"></td>
+        </tr>
+          <tr>
+  <td>Dispatches Sounds</td>
+  <td>
+    <label class="switch">
+      <input type="checkbox" id="muteDisp">
+      <span class="slider round"></span>
+    </label>
+  </td>
+</tr>
+<tr>
+  <td>Get Dispatches</td>
+  <td>
+    <label class="switch">
+      <input type="checkbox" id="getDisp">
+      <span class="slider round"></span>
+    </label>
+  </td>
+</tr>
+    </table>
+    <div class="setbtn" onclick="savechanges()">Save Changes</div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
