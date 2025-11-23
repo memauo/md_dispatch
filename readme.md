@@ -44,3 +44,4 @@ Config.BlacklistShootingZones = {
     {minPos = vector3(1615.8, 4391.12, 0), maxPos = vector3(524.96, 5872.0, 1000)}, --**Now this is Mt.Chilliad; where should be shooting allowed without dispatch creation?**
 }
 
+
