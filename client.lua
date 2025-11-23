@@ -455,13 +455,6 @@ function update(panic)
 end
 
 
-RegisterCommand("mdTriggerTest", function()
-    local playerPed = PlayerPedId()
-    local coords = GetEntityCoords(playerPed, true)
-    local playerPos = vector3(coords.x, coords.y, coords.z)
-    
-    TriggerServerEvent("md_dispatch:CreateDispatch", {"police", "mechanic"}, "Testiiiik", "CODE 1000", playerPos, 99)
-end)
 
 RegisterNetEvent("md_dispatch:playAllPanicClient", function(coords)
     local myPed = PlayerPedId()
@@ -479,4 +472,5 @@ RegisterNetEvent("md_dispatch:playAllPanicClient", function(coords)
                 break
             end
         end
+
 end)
